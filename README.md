@@ -1,1 +1,1 @@
-# Mangata-Gallo-store
+# Mangata&Gallo store
