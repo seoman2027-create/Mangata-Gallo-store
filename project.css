@@ -1,0 +1,140 @@
+@media (max-width: 768px) {
+      .main {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text, .image {
+        width: 100%;
+      }
+    }
+
+body{
+	background-color: rgb(204, 202, 202);
+	animation: background-gradient-animation 9s ease-in-out infinite;
+	background: linear-gradient(270deg, rgb(227, 225, 225), rgb(161, 160, 160), rgb(138, 138, 138), rgb(97, 96, 96));
+	background-attachment: fixed;
+	background-size: 400% 100%;
+}
+
+@keyframes background-gradient-animation{
+	0%{
+		background-position: 0% 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0% 50%;
+	}
+}
+
+.image {
+	display: block;
+	margin: 40px auto auto auto;
+	height: 30px;
+	max-width: auto;
+	width: 240px;
+	transition: transform 0.2s ease-in-out;
+	position: relative;
+}
+
+.image:active{
+	transform: scale(0.9);
+	filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
+
+nav{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 30px auto auto auto;
+}
+
+nav :hover{
+	background-color: black;
+	transition: ease 0.5s;
+	text-decoration: underline;
+	border-radius: 13px;
+	color: white;
+}
+
+nav a{
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	padding: 15px;
+	margin: auto 40px ;
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+.main {
+	display: grid;
+	grid-template-areas: "section1 section1 section1"
+						 "section2 section3 section4";
+	flex-wrap: wrap;
+}
+
+.section1{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 45px;
+	flex-wrap: wrap;
+	grid-area: section1;
+}
+
+.section2{
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	grid-area: section2;
+	flex-wrap: wrap;
+	margin: 45px;
+}
+.section3{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	grid-area: section3;
+	flex-wrap: wrap;
+	margin: 45px;
+}
+.section4{
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	grid-area: section4;
+	flex-wrap: wrap;
+	margin: 45px;
+}
+
+.footer{
+	display: grid;
+	grid-template-areas: "section1 section2";
+}
+
+.footer1{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	grid-area: section1;
+	margin: 20px;
+	transition: transform 0.2s ease-in;
+}
+
+.footer2{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	grid-area: section2;
+	margin: 20px;
+}
+
+.footer1:hover{
+	transform: scale(0.9);
+	filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
